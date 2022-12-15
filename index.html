@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="./assets/style.css">
+   <title>ToDo Today</title>
+</head>
+
+<body>
+   <main>
+      <header>
+         <h1>Today's ToDo List</h1>
+         <h2>di Vincenzo Maiorana</h2>
+      </header>
+
+      <section class="interactions">
+         <input type="text" placeholder="Nuovo Task" id="newTask" />
+         <button id="addTask" onclick="addTask()">AGGIUNGI</button>
+         <p>Clicca sul task per completarlo<br>Clicca su ❌ per cancellarlo</p>
+      </section>
+
+
+      <section id="task-list">
+
+
+         <div class="task" id="task1" onclick="taskCompleted()">
+            <span id="delItem1" class="delete" onclick="deleteTask()">❌</span><span id="titleTask1" class="completed"
+               onclick="completeTask()">CIAONE</span>
+         </div>
+
+
+      </section>
+
+
+   </main>
+   <footer>
+      <h3>Creato da <a href="https://www.vincenzomaiorana.it" alt="Sito web di Vincenzo Maiorana"
+            target="_blank">Vincenzo Maiorana</a> &copy; 2022</h3>
+   </footer>
+
+   <script src="./assets/index.js"></script>
+</body>
+
+</html>
