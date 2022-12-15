@@ -8,8 +8,12 @@ const taskTemplate = (task, id) => `
 const createNewTask = () => {
   const taskList = document.getElementById("task-list");
   const newTaskTitle = document.getElementById("newTask").value;
-  const newTaskID = taskList.children.length + 1;
-  taskList.innerHTML += taskTemplate(newTaskTitle, newTaskID);
+  if (newTaskTitle === "") {
+    alert("ATTENZIONE: Il task deve avere un titolo");
+  } else {
+    const newTaskID = taskList.children.length + 1;
+    taskList.innerHTML += taskTemplate(newTaskTitle, newTaskID);
+  }
 };
 
 const deleteTask = (id) => {
