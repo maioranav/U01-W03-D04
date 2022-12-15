@@ -7,7 +7,7 @@ const taskTemplate = (task, id) => `
 
 const createNewTask = () => {
   const taskList = document.getElementById("task-list");
-  const newTaskTitle = document.getElementById("newTask").value;
+  const newTaskTitle = document.getElementById("newTask").value.slice(0, 28);
   if (newTaskTitle === "") {
     alert("ATTENZIONE: Il task deve avere un titolo");
   } else {

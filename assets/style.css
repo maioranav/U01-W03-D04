@@ -34,10 +34,9 @@ header h1 {
 header h2 {
   font-size: 1em;
 }
-.task-list {
-  text-align: left;
-  display: block;
-  width: 250px;
+#task-list {
+  overflow: auto;
+  height: 67vh;
 }
 .task {
   background: rgba(255, 255, 255, 0.5);
