@@ -7,7 +7,7 @@ const taskTemplate = (task, id) => `
 
 const createNewTask = () => {
   const taskList = document.getElementById("task-list");
-  const newTaskTitle = document.getElementById("newTask").value.slice(0, 28);
+  const newTaskTitle = document.getElementById("newTask").value.slice(0, 25);
   if (newTaskTitle === "") {
     alert("ATTENZIONE: Il task deve avere un titolo");
   } else {
@@ -23,4 +23,13 @@ const deleteTask = (id) => {
 };
 const taskCompleted = (id) => {
   document.getElementById(`titleTask${id}`).classList.toggle("completed");
+};
+
+window.onload = function () {
+  const newTaskTitle = document.querySelector("#newTask");
+  newTaskTitle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      createNewTask();
+    }
+  });
 };
